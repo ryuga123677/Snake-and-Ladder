@@ -35,7 +35,7 @@ function dice1() {
    </div>`
    }
    if (d == 2) {
-      document.getElementById('diceface1').innerHTML = `    <div class="square2">
+      document.getElementById('diceface1').innerHTML = `<div class="square2">
       <div class="circle2">
   
       </div>
@@ -295,7 +295,7 @@ console.log(temp);
 function placebuttons2(sum)
 {
    var m = 'p' + sum
-   let html = `<img class="blue" src="./png-transparent-board-game-ludo-piece-playing-red-toy-recreation-red-gaming-red-game-removebg-preview.png">`;
+   let html = `<img class="blue" src="./download-removebg-preview.png">`;
    document.getElementById(m).innerHTML = html
    console.log('place');
    console.log(sum);
