@@ -1,8 +1,13 @@
 
 var temp1 = 0;
-var sum1 = 0;
-var sum2 = 0;
+var sum1 = 1;
+var sum2 = 1;
 var temp2 = 0;
+var toggle=false;
+let blue_piece = `<img class="blue" src="./png-transparent-board-clue-game-ludo-piece-playing-blue-toy-recreation-removebg-preview.png">`;
+let red_piece = `<img class="red" src="./download-removebg-preview.png">`;
+document.getElementById("forred").innerHTML = red_piece;
+document.getElementById("forblue").innerHTML = blue_piece;
 function removeprevious(temp)
 {let x = 'p' + temp;
 document.getElementById(x).innerHTML = ''
@@ -12,15 +17,19 @@ console.log(temp);
 }
 function placebuttons(sum)
 {
-   var m = 'p' + sum
+   var m = 'p' + sum;
    let html = `<img class="blue" src="./png-transparent-board-clue-game-ludo-piece-playing-blue-toy-recreation-removebg-preview.png">`;
    document.getElementById(m).innerHTML = html
    console.log('place');
    console.log(sum);
 }
+
 function dice1() {
+
    // let x = 'p' + temp1;
-   // document.getElementById(x).innerHTML = ''
+
+   if(toggle==false)
+   {
    removeprevious(temp1)
    let d = Math.floor(Math.random() * 6 + 1);
    if (d == 1) {
@@ -140,6 +149,14 @@ function dice1() {
 
    }
    sum1 += d;
+   if(sum1!=0)
+   {
+   document.getElementById("forblue").innerHTML = '';
+   }
+   else{
+      document.getElementById("forblue").innerHTML = blue_piece;
+
+   }
 
 
    // var m = 'p' + sum1
@@ -284,9 +301,19 @@ function dice1() {
       
       temp1=sum1
    }
+
 }
+if(sum1==sum2)
+{
+   sum2=1;
+document.getElementById("forred").innerHTML=red_piece;
+}
+toggle=true;
+}
+
 function removeprevious2(temp)
 {let x = 'p' + temp;
+
 document.getElementById(x).innerHTML = ''
 console.log('rem');
 console.log(temp);
@@ -294,13 +321,15 @@ console.log(temp);
 }
 function placebuttons2(sum)
 {
-   var m = 'p' + sum
-   let html = `<img class="blue" src="./download-removebg-preview.png">`;
+   var m = 'p' + sum;
+   let html = `<img class="red" src="./download-removebg-preview.png">`;
    document.getElementById(m).innerHTML = html
    console.log('place');
    console.log(sum);
 }
 function dice2() {
+   if(toggle==true)
+   { 
  removeprevious2(temp2)
    let d = Math.floor(Math.random() * 6 + 1);
    if (d == 1) {
@@ -415,7 +444,7 @@ function dice2() {
 </div>`
 
    }
-   if ((sum1 + d) > 100) {
+   if ((sum2 + d) > 100) {
       return;
 
    }
@@ -424,6 +453,14 @@ function dice2() {
 
    temp2 = sum2
    checkwinner(sum1, sum2);
+   if(sum2!=0)
+      {
+      document.getElementById("forred").innerHTML = '';
+      }
+      else{
+         document.getElementById("forred").innerHTML = red_piece;
+   
+      }
   
    if (sum2 == 2) {
       sum2 = 23;
@@ -555,8 +592,15 @@ function dice2() {
       
       temp2=sum2
    }
-
+   if(sum1==sum2)
+{
+   sum1=1;
+   document.getElementById("forblue").innerHTML=blue_piece;
 }
+
+}toggle=false;
+}
+
 function checkwinner(sum1, sum2) {
    if (sum1 == 100 )
    {
