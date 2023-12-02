@@ -29,7 +29,7 @@ function dice1() {
 
    if(toggle==false)
    {document.getElementById("info").innerHTML ='Player 2 turn';
-   removeprevious(temp1)
+   
    let d = Math.floor(Math.random() * 6 + 1);
    if (d == 1) {
       document.getElementById('diceface1').innerHTML = `<div id="dice1">
@@ -144,9 +144,11 @@ function dice1() {
 
    }
    if ((sum1 + d) > 100) {
+      toggle=true;
       return;
 
    }
+   removeprevious(temp1);
    sum1 += d;
    if(sum1!=1)
    {
@@ -330,7 +332,7 @@ function placebuttons2(sum)
 function dice2() {
    if(toggle==true)
    { document.getElementById("info").innerHTML ='Player 1 turn';
- removeprevious2(temp2)
+
    let d = Math.floor(Math.random() * 6 + 1);
    if (d == 1) {
       document.getElementById('diceface2').innerHTML = `<div id="dice1">
@@ -445,9 +447,11 @@ function dice2() {
 
    }
    if ((sum2 + d) > 100) {
+      toggle=false;
       return;
 
    }
+   removeprevious2(temp2);
    sum2 += d;
   placebuttons2(sum2)
 
