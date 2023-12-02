@@ -1,4 +1,3 @@
-
 var temp1 = 0;
 var sum1 = 1;
 var sum2 = 1;
@@ -26,11 +25,10 @@ function placebuttons(sum)
 
 function dice1() {
 
-
+   // let x = 'p' + temp1;
 
    if(toggle==false)
-   {
-      document.getElementById('info').innerHTML ='Player 2 turn'
+   {document.getElementById("info").innerHTML ='Player 2 turn';
    removeprevious(temp1)
    let d = Math.floor(Math.random() * 6 + 1);
    if (d == 1) {
@@ -331,7 +329,7 @@ function placebuttons2(sum)
 }
 function dice2() {
    if(toggle==true)
-   {    document.getElementById('info').innerHTML ='Player 1 turn'
+   { document.getElementById("info").innerHTML ='Player 1 turn';
  removeprevious2(temp2)
    let d = Math.floor(Math.random() * 6 + 1);
    if (d == 1) {
@@ -451,19 +449,11 @@ function dice2() {
 
    }
    sum2 += d;
-   if(sum2!=1)
-   {
-   document.getElementById("forblue").innerHTML = '';
-   }
-   else{
-      document.getElementById("forblue").innerHTML = blue_piece;
-
-   }
   placebuttons2(sum2)
 
    temp2 = sum2
    checkwinner(sum1, sum2);
-   if(sum2!=0)
+   if(sum2!=1)
       {
       document.getElementById("forred").innerHTML = '';
       }
