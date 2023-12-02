@@ -5,7 +5,7 @@ var sum2 = 1;
 var temp2 = 0;
 var toggle=false;
 let blue_piece = `<img class="blue" src="./png-transparent-board-clue-game-ludo-piece-playing-blue-toy-recreation-removebg-preview.png">`;
-let red_piece = `<img class="red" src="./download-removebg-preview.png">`;
+let red_piece = `<img class="red" src="./2560458f4e5d25925e4440ae290fff054dbb31.png">`;
 document.getElementById("forred").innerHTML = red_piece;
 document.getElementById("forblue").innerHTML = blue_piece;
 function removeprevious(temp)
@@ -26,10 +26,11 @@ function placebuttons(sum)
 
 function dice1() {
 
-   // let x = 'p' + temp1;
+
 
    if(toggle==false)
    {
+      document.getElementById('info').innerHTML ='Player 2 turn'
    removeprevious(temp1)
    let d = Math.floor(Math.random() * 6 + 1);
    if (d == 1) {
@@ -149,7 +150,7 @@ function dice1() {
 
    }
    sum1 += d;
-   if(sum1!=0)
+   if(sum1!=1)
    {
    document.getElementById("forblue").innerHTML = '';
    }
@@ -306,6 +307,7 @@ function dice1() {
 if(sum1==sum2)
 {
    sum2=1;
+   temp2=0;
 document.getElementById("forred").innerHTML=red_piece;
 }
 toggle=true;
@@ -322,14 +324,14 @@ console.log(temp);
 function placebuttons2(sum)
 {
    var m = 'p' + sum;
-   let html = `<img class="red" src="./download-removebg-preview.png">`;
+   let html = `<img class="red" src="./2560458f4e5d25925e4440ae290fff054dbb31.png">`;
    document.getElementById(m).innerHTML = html
    console.log('place');
    console.log(sum);
 }
 function dice2() {
    if(toggle==true)
-   { 
+   {    document.getElementById('info').innerHTML ='Player 1 turn'
  removeprevious2(temp2)
    let d = Math.floor(Math.random() * 6 + 1);
    if (d == 1) {
@@ -449,6 +451,14 @@ function dice2() {
 
    }
    sum2 += d;
+   if(sum2!=1)
+   {
+   document.getElementById("forblue").innerHTML = '';
+   }
+   else{
+      document.getElementById("forblue").innerHTML = blue_piece;
+
+   }
   placebuttons2(sum2)
 
    temp2 = sum2
@@ -595,6 +605,7 @@ function dice2() {
    if(sum1==sum2)
 {
    sum1=1;
+   temp1=0;
    document.getElementById("forblue").innerHTML=blue_piece;
 }
 

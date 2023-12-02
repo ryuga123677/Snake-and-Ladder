@@ -273,7 +273,7 @@
     width: 610px;}
   .red{
     
-   background-image: url('./download-removebg-preview.png');
+   background-image: url('./2560458f4e5d25925e4440ae290fff054dbb31.png');
     height: 40px;
     width: 25px;
     background-repeat: no-repeat;
@@ -325,4 +325,12 @@
    #red-piece{
     padding-left: 10%;
     padding-right: 2%;
+   }
+   #info{
+    display: flex;
+    justify-content: center;
+    padding-left: 4%;
+    color: yellow;
+   font-size: larger;
+
    }
