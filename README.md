@@ -1,1 +1,1 @@
-Snake and Ladder game .
+Simple Snake and Ladder game .
