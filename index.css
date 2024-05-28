@@ -256,6 +256,7 @@ button:focus-visible {
   margin: 0px auto;
   
   
+  
 }
 .row{
   height: 61px;
@@ -287,6 +288,7 @@ flex-direction: row;
  
   
   background-repeat: no-repeat;
+
   
 }  
 #dices{
