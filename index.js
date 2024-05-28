@@ -141,18 +141,22 @@ function dice1() {
     }
     if (sum1 + d > 100) {
       toggle = true;
+      flag=true;
       return;
     }
      removeprevious(temp1);
     sum1 += d;
   
-    var bluelement= document.getElementById("forblue");
+    var bluelement= document.querySelector('#p1 #forblue');
+    
     if(sum1!=1)
       {if(bluelement!=null)
       bluelement.innerHTML = '';
+      
       }
       else{
          bluelement.innerHTML = blue_piece;
+        
    
       }
 
@@ -441,6 +445,7 @@ function dice2() {
     }
     if (sum2 + d > 100) {
       toggle = false;
+      flag=false;
       return;
     }
     removeprevious2(temp2);
@@ -590,13 +595,13 @@ function dice2() {
     checkwinner(sum1, sum2);
 
   
-    var redelement=document.getElementById("forred");
+    var redelement=document.querySelector('#p1 #forred');
     if(sum2!=1)
       {if(redelement!=null)
       redelement.innerHTML = '';
       }
       else{
-         document.getElementById("forred").innerHTML = red_piece;
+         redelement.innerHTML = red_piece;
    
       }
     if (sum2 == 2) {
