@@ -161,11 +161,12 @@ function dice1() {
       (function(i) {
         setTimeout(function() {
           placebuttons(i + 1);
+          placebuttons2(temp2);
     
           if (i < sum1 - 1) {
             setTimeout(function() {
               removeprevious(i + 1);
-              placebuttons2(temp2);
+             
               
             }, 600);
           } else if (i === sum1 - 1 && sum1 === 6) {
@@ -175,6 +176,7 @@ function dice1() {
               sum1 = 45;
               temp1 = 45;
              placebuttons(sum1);
+             toggle=true;
             }, 600);
           }
           else if (i === sum1 - 1 && sum1 === 20) {
@@ -184,6 +186,7 @@ function dice1() {
               sum1 = 59;
               temp1 = 59;
              placebuttons(sum1);
+             toggle=true;
             }, 600);
           }
           else if (i === sum1 - 1 && sum1 === 57) {
@@ -193,6 +196,7 @@ function dice1() {
               sum1 = 96;
               temp1 = 96;
              placebuttons(sum1);
+             toggle=true;
             }, 600);
           }
           else if (i === sum1 - 1 && sum1 === 52) {
@@ -202,6 +206,7 @@ function dice1() {
               sum1 = 72;
               temp1 = 72;
              placebuttons(sum1);
+             toggle=true;
             }, 600);
           }
           else if (i === sum1 - 1 && sum1 === 71) {
@@ -211,6 +216,7 @@ function dice1() {
               sum1 = 92;
               temp1 = 92;
              placebuttons(sum1);
+             toggle=true;
             }, 600);
           }
           else if (i === sum1 - 1 && sum1 === 43) {
@@ -220,6 +226,7 @@ function dice1() {
               sum1 = 17;
               temp1 = 17;
              placebuttons(sum1);
+             toggle=true;
             }, 600);
           }
           else if (i === sum1 - 1 && sum1 === 50) {
@@ -229,6 +236,7 @@ function dice1() {
               sum1 = 5;
               temp1 = 5;
              placebuttons(sum1);
+             toggle=true;
             }, 600);
           }
           else if (i === sum1 - 1 && sum1 === 56) {
@@ -238,6 +246,7 @@ function dice1() {
               sum1 = 8;
               temp1 = 8;
              placebuttons(sum1);
+             toggle=true;
             }, 600);
           }
           else if (i === sum1 - 1 && sum1 === 73) {
@@ -247,6 +256,7 @@ function dice1() {
               sum1 = 15;
               temp1 = 15;
              placebuttons(sum1);
+             toggle=true;
             }, 600);
           }
           else if (i === sum1 - 1 && sum1 === 87) {
@@ -256,6 +266,7 @@ function dice1() {
               sum1 = 49;
               temp1 = 49;
              placebuttons(sum1);
+             toggle=true;
 
             }, 600);
           }
@@ -266,6 +277,7 @@ function dice1() {
               sum1 = 63;
               temp1 = 63;
              placebuttons(sum1);
+             toggle=true;
             }, 600);
           }
           else if (i === sum1 - 1 && sum1 === 98) {
@@ -275,9 +287,11 @@ function dice1() {
               sum1 = 40;
               temp1 = 40;
              placebuttons(sum1);
+             toggle=true;
             }, 600);
           }
-          toggle=true;
+          else{
+          toggle=true;}
         }, 600 * (i - temp1));
       })(i);
     }
@@ -451,6 +465,7 @@ function dice2() {
               sum2 = 45;
               temp2 = 45;
              placebuttons2(sum2);
+             toggle=false;
             }, 600);
           }
           else if (i === sum2 - 1 && sum2 === 20) {
@@ -460,6 +475,7 @@ function dice2() {
               sum2 = 59;
               temp2 = 59;
              placebuttons2(sum2);
+             toggle=false;
             }, 600);
           }
           else if (i === sum2 - 1 && sum2 === 57) {
@@ -469,6 +485,7 @@ function dice2() {
               sum2= 96;
               temp2 = 96;
              placebuttons2(sum2);
+             toggle=false;
             }, 600);
           }
           else if (i === sum2 - 1 && sum2 === 52) {
@@ -477,7 +494,7 @@ function dice2() {
               removeprevious2(i+1);
               sum2 = 72;
               temp2 = 72;
-             placebuttons2(sum2);
+             placebuttons2(sum2);     toggle=false;
             }, 600);
           }
           else if (i === sum2 - 1 && sum2 === 71) {
@@ -487,6 +504,7 @@ function dice2() {
               sum2 = 92;
               temp2 = 92;
              placebuttons2(sum2);
+             toggle=false;
             }, 600);
           }
           else if (i === sum2 - 1 && sum2 === 43) {
@@ -496,6 +514,7 @@ function dice2() {
               sum2 = 17;
               temp2= 17;
              placebuttons2(sum2);
+             toggle=false;
             }, 600);
           }
           else if (i === sum2 - 1 && sum2 === 50) {
@@ -505,6 +524,7 @@ function dice2() {
               sum2 = 5;
               temp2 = 5;
              placebuttons2(sum2);
+             toggle=false;
             
             }, 600);
           }
@@ -515,6 +535,7 @@ function dice2() {
               sum2 = 8;
               temp2 = 8;
              placebuttons2(sum2);
+             toggle=false;
             }, 600);
           }
           else if (i === sum2- 1 && sum2 === 73) {
@@ -524,6 +545,7 @@ function dice2() {
               sum2 = 15;
               temp2 = 15;
              placebuttons2(sum2);
+             toggle=false;
             }, 600);
           }
           else if (i === sum2 - 1 && sum2 === 87) {
@@ -533,6 +555,7 @@ function dice2() {
               sum2 = 49;
               temp2 = 49;
              placebuttons2(sum2);
+             toggle=false;
             }, 600);
           }
           else if (i === sum2 - 1 && sum2 === 84) {
@@ -542,6 +565,7 @@ function dice2() {
               sum2 = 63;
               temp2 = 63;
              placebuttons2(sum2);
+             toggle=false;
             }, 600);
           }
           else if (i === sum2 - 1 && sum2 === 98) {
@@ -551,10 +575,12 @@ function dice2() {
               sum2 = 40;
               temp2 = 40;
              placebuttons2(sum2);
+             toggle=false;
             }, 600);
           }
-          
+          else{
             toggle=false;
+          }
           
         }, 600 * (i - temp2));
       })(i);
