@@ -3,8 +3,7 @@ var temp1 = 0;
 var sum1 = 1;
 var sum2 = 1;
 var temp2 = 0;
-var cnt1=0;
-var cnt2=0;
+var flag=false;
 var toggle = false;
 let blue_piece = `<img class="blue" src="./png-transparent-board-clue-game-ludo-piece-playing-blue-toy-recreation-removebg-preview.png">`;
 let red_piece = `<img class="red" src="./2560458f4e5d25925e4440ae290fff054dbb31.png">`;
@@ -27,7 +26,7 @@ function placebuttons(sum) {
 function dice1() {
   // let x = 'p' + temp1;
 
-  if (toggle == false) {
+  if (toggle == false && flag==false) {
     document.getElementById("info").innerHTML = "Player 2 turn";
 
     let d = Math.floor(Math.random() * 6 + 1);
@@ -146,7 +145,7 @@ function dice1() {
     }
      removeprevious(temp1);
     sum1 += d;
-    cnt1++;
+  
     var bluelement= document.getElementById("forblue");
     if(sum1!=1)
       {if(bluelement!=null)
@@ -309,7 +308,7 @@ function dice1() {
 
       temp1 = sum1;
     }
-    
+    flag=true;
 }}
 
 function removeprevious2(temp) {
@@ -325,7 +324,7 @@ function placebuttons2(sum) {
   console.log(sum);
 }
 function dice2() {
-  if (toggle == true) {
+  if (toggle == true && flag==true) {
     document.getElementById("info").innerHTML = "Player 1 turn";
 
     let d = Math.floor(Math.random() * 6 + 1);
@@ -611,7 +610,7 @@ function dice2() {
       temp2 = sum2;
       console.log(sum2);
     }
-   
+   flag=false;
 
   }
 
