@@ -305,6 +305,7 @@ function dice1() {
       t = temp1;
       setTimeout(removeprevious, 1000, t);
       setTimeout(placebuttons, 1000, sum1);
+      toggle=true;
 
       temp1 = sum1;
     }
@@ -605,6 +606,7 @@ function dice2() {
       t = temp2;
       setTimeout(removeprevious2, 1000, t);
       setTimeout(placebuttons2, 1000, sum2);
+      toggle=false;
 
       temp2 = sum2;
       console.log(sum2);
